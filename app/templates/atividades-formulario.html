@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+  <div class="container">
+    
+    <h1 class="mt-3 mb-4">Cadastrando/alterando uma atividade de um evento</h1>
+
+    <form class="form">
+      <div class="form-group">
+        <label for="id">ID:</label>
+        <input type="text" class="form-control" id="id" name="id" disabled>
+      </div>    
+      <div class="form-group">
+        <label for="nome">Nome:</label>
+        <input type="text" class="form-control" id="nome" name="nome">
+      </div>
+      <div class="form-group">
+        <label for="ministante">Ministrante:</label>
+        <input type="text" class="form-control" id="ministante" name="ministante">
+      </div>      
+      <div class="form-group">
+        <label for="instituicao">Tipo:</label>
+        <select class="form-control" id="instituicao" name="instituicao">
+          <option value="oficina">Oficina</option>
+          <option value="palestra">Palestra</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="vagas">Vagas:</label>
+        <input type="number" class="form-control" id="vagas" name="vagas">
+      </div>    
+      <div class="form-group">
+        <label for="local">Local:</label>
+        <input type="text" class="form-control" id="local" name="local">
+      </div>
+      <div class="form-group">
+        <label for="data">Data:</label>
+        <input type="date" class="form-control" id="data" name="data">
+      </div>    
+      <button type="submit" class="btn btn-success mb-2">Cadastrar/Alterar</button>
+    </form>
+  </div>
+{% endblock %}
