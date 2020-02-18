@@ -2,18 +2,18 @@
 
 {% block conteudo %}
   <div class="container">
-    <h1 class="mt-3 mb-4">Nome do evento</h1>
+    <h1 class="mt-3 mb-4">{{ evento.nome }}</h1>
     <div class="d-flex">
       <div class="d-flex flex-column align-items-center">
-        <img src="assets/images/conect.png" width="240" height="143">
+        <img src="{{ url_for('static', filename=evento.logotipo) }}" width="240" height="143">
         <button class="btn btn-danger mt-4">Inscreva-se</button>
       </div>
       <div class="ml-3">
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <p>{{ evento.descricao }}</p>
         <ul>
-          <li>Instituição: <span class="font-weight-bold">IFRO</span></li>
-          <li>Local: <span class="font-weight-bold">Vilhena - RO</span></li>
-          <li>Data: <span class="font-weight-bold">10/02/2012</span></li>
+          <li>Instituição: <span class="font-weight-bold">{{ evento.instituicao }}</span></li>
+          <li>Local: <span class="font-weight-bold">{{ evento.local }}</span></li>
+          <li>Data: <span class="font-weight-bold">{{ evento.data }}</span></li>
         </ul>  
       </div>
     </div>

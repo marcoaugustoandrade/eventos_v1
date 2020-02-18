@@ -2,14 +2,19 @@
 
 {% block conteudo %}
   <div class="container">
-    
-    <h1 class="mt-3 mb-4">Cadastrando/alterando uma atividade de um evento</h1>
+    {% if tipo != 'inserir' %}
+    <h1 class="mt-3 mb-4">Alterando uma atividade</h1>
+    {% else %}
+    <h1 class="mt-3 mb-4">Cadastrando uma atividade</h1>
+    {% endif %}
 
     <form class="form">
+      {% if tipo != 'inserir' %}
       <div class="form-group">
         <label for="id">ID:</label>
         <input type="text" class="form-control" id="id" name="id" disabled>
-      </div>    
+      </div>
+      {% endif %}
       <div class="form-group">
         <label for="nome">Nome:</label>
         <input type="text" class="form-control" id="nome" name="nome">
@@ -36,8 +41,12 @@
       <div class="form-group">
         <label for="data">Data:</label>
         <input type="date" class="form-control" id="data" name="data">
-      </div>    
-      <button type="submit" class="btn btn-success mb-2">Cadastrar/Alterar</button>
+      </div>
+      {% if tipo != 'inserir' %}
+      <button type="submit" class="btn btn-success mb-2">Alterar</button>
+      {% else %}
+      <button type="submit" class="btn btn-success mb-2">Cadastrar</button>
+      {% endif %}
     </form>
   </div>
 {% endblock %}

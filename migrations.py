@@ -10,8 +10,8 @@ db.session.commit()
 
 # Eventos
 from app.models.tables import Evento
-e1 = Evento(nome='Semana ADS', instituicao='IFRO', local="Campus Vilhena", data=dt.now(), logotipo="#", usuario_id='1')
-e2 = Evento(nome='Semana ADS', instituicao='IFRO', local="Campus Vilhena", data=dt.now(), logotipo="#", usuario_id='1')
+e1 = Evento(nome='Semana ADS', descricao="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam", instituicao='IFRO', local="Campus Vilhena", data=dt.now(), logotipo="conect.png", usuario_id='1')
+e2 = Evento(nome='Semana ADS', descricao="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam", instituicao='IFRO', local="Campus Vilhena", data=dt.now(), logotipo="conect.png", usuario_id='1')
 db.session.add(e1)
 db.session.add(e2)
 db.session.commit()

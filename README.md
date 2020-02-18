@@ -1,5 +1,7 @@
 # SQL Alchemy
 
+pip3 install -r requirements.txt
+
 pip3 install Flask
 pip3 install flask-sqlalchemy
 pip3 install pymysql
